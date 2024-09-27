@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./App.module.css";
+import "./App.css";
 
 const App = () => {
   const [employees, setEmployees] = useState([]);
@@ -49,8 +49,8 @@ const App = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>Employee Data Table</h1>
-      <div className={styles.paginationWrapper}>
+      <h1 className="title">Employee Data Table</h1>
+      <div className="paginationWrapper">
         {employees.length > 0 ? (
           <table>
             <thead>
@@ -77,15 +77,15 @@ const App = () => {
         )}
         <div>
           <button
-            className={styles.button}
+            className="button"
             onClick={previousPage}
             disabled={currentPage === 1}
           >
             Previous
           </button>
-          <span className={styles.button}> {currentPage} </span>
+          <span className="button"> {currentPage} </span>
           <button
-            className={styles.button}
+            className="button"
             onClick={nextPage}
             disabled={currentPage === Math.ceil(employees.length / rowsPerPage)}
           >
