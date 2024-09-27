@@ -35,15 +35,15 @@ const App = () => {
   const indexOfFirstRow = indexOfLastRow - rowsPerPage;
   const currentRows = employees.slice(indexOfFirstRow, indexOfLastRow);
 
-  const nextPage = () => {
-    if (currentPage < Math.ceil(employees.length / rowsPerPage)) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
-
   const previousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
+    }
+  };
+
+  const nextPage = () => {
+    if (currentPage < Math.ceil(employees.length / rowsPerPage)) {
+      setCurrentPage(currentPage + 1);
     }
   };
 
